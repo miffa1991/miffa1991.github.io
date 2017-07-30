@@ -1,9 +1,4 @@
-<?php
-/*
-* HTML-минимизация
-*/
-ob_start();
-?>
+
 <!DOCTYPE html>
 <html lang="ru-RU" class="no-js">
 <head>
@@ -946,18 +941,5 @@ ob_start();
 
 </body>
 </html>
-
-<?php
-/*
-* HTML-минимизация
-*/
-$out = ob_get_clean();
-$out = preg_replace('/(?![^<]*<\/pre>)[\n\r\t]+/', "\n", $out);
-$out = preg_replace('/ {2,}/', ' ', $out);
-$out = preg_replace('/>[\n]+/', '>', $out);
-echo $out;
-?>
-
-
 
 
